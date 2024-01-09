@@ -1,0 +1,10 @@
+package com.tt24java.repository;
+
+import java.util.List;
+
+
+public class BuildingRepository {
+	List<BuildingEntity>findAll();
+	
+
+}

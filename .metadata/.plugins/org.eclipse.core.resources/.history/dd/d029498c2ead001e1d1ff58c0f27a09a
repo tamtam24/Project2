@@ -1,0 +1,5 @@
+package com.tt24java.repository.entity;
+
+public class BuildingEntity {
+
+}

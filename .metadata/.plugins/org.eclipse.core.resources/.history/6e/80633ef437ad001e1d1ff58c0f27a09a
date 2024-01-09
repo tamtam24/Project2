@@ -1,0 +1,15 @@
+package com.tt24java.repository;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.tt24java.repository.entity.BuildingEntity;
+
+
+public interface BuildingRepository {
+	List<BuildingEntity>buildingEntites =new ArrayList<>();
+		
+	
+	
+
+}

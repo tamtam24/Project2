@@ -1,0 +1,10 @@
+package com.tt24java.service;
+
+import java.util.List;
+
+import com.tt24java.repository.entity.BuildingEntity;
+
+public interface BuildingService {
+	List<BuildingEntity>findAll(String name);
+
+}
