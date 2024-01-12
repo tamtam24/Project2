@@ -142,4 +142,5 @@ public class BuildingRepositoryImpl implements BuildingRepository {
 		return result;
 	}
 
+
 }
