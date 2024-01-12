@@ -6,7 +6,7 @@ public class BuildingEntity {
 	private int id;
 	private String name;
 	private String street;
-	private String Ward;
+	private String ward;
 	private int districtid;
 	private String structure;
 	private int numberofbasement;
@@ -32,6 +32,9 @@ public class BuildingEntity {
 	private Date createdate;
 	private Date modifieddate;
 	private String createdby;
+	private String modifiedby;
+	private String managername;
+	private String managerphonenumber;
 	public int getId() {
 		return id;
 	}
@@ -44,11 +47,17 @@ public class BuildingEntity {
 	public void setName(String name) {
 		this.name = name;
 	}
+	public String getStreet() {
+		return street;
+	}
+	public void setStreet(String street) {
+		this.street = street;
+	}
 	public String getWard() {
-		return Ward;
+		return ward;
 	}
 	public void setWard(String ward) {
-		Ward = ward;
+		this.ward = ward;
 	}
 	public int getDistrictid() {
 		return districtid;
@@ -200,12 +209,26 @@ public class BuildingEntity {
 	public void setCreatedby(String createdby) {
 		this.createdby = createdby;
 	}
-	public String getStreet() {
-		return street;
+	public String getManagername() {
+		return managername;
 	}
-	public void setStreet(String street) {
-		this.street = street;
+	public void setManagername(String managername) {
+		this.managername = managername;
 	}
+	public String getManagerphonenumber() {
+		return managerphonenumber;
+	}
+	public void setManagerphonenumber(String managerphonenumber) {
+		this.managerphonenumber = managerphonenumber;
+	}
+	public String getModifiedby() {
+		return modifiedby;
+	}
+	public void setModifiedby(String modifiedby) {
+		this.modifiedby = modifiedby;
+	}
+	
+	
 	
 	
 	
