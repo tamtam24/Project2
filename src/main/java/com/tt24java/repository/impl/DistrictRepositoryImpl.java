@@ -17,8 +17,8 @@ public class DistrictRepositoryImpl implements DistrictRepository {
     static final String PASS = "";
 
     @Override
-    public String findDistrictNameById(int districtid) {
-        String sql = "SELECT name FROM district WHERE id = " + districtid;
+    public String findDistrictNameById(int districtId) {
+        String sql = "SELECT name FROM district WHERE id = " + districtId;
         String districtName = "";
         try (Connection conn = DriverManager.getConnection(DB_URL, USER, PASS);
              Statement stmt = conn.createStatement();
