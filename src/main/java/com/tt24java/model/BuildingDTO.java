@@ -1,9 +1,5 @@
 package com.tt24java.model;
 
-import java.util.List;
-
-import com.tt24java.repository.entity.rentareaEntity;
-
 public class BuildingDTO {
 	private String name;
 	private String address;
@@ -14,7 +10,7 @@ public class BuildingDTO {
 	private int rentprice;
 	private String servicefee;
 	private Float brokeragefee;
-	private List<rentareaEntity> typeCode;
+	private String typeCode;
 	
 	public String getName() {
 		return name;
@@ -70,12 +66,13 @@ public class BuildingDTO {
 	public void setBrokeragefee(Float brokeragefee) {
 		this.brokeragefee = brokeragefee;
 	}
-	public List<rentareaEntity> getTypeCode() {
+	public String getTypeCode() {
 		return typeCode;
 	}
-	public void setTypeCode(List<rentareaEntity> typeCode) {
+	public void setTypeCode(String typeCode) {
 		this.typeCode = typeCode;
 	}
+	
 	
 	
 	
