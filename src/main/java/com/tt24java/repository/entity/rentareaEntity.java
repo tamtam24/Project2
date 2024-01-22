@@ -4,7 +4,7 @@ import java.sql.Date;
 
 public class rentareaEntity {
 	private int id;
-	private int value;
+	private String value;
 	private int buildingid;
 	private Date createddate;
 	private Date modifieddate;
@@ -16,10 +16,10 @@ public class rentareaEntity {
 	public void setId(int id) {
 		this.id = id;
 	}
-	public int getValue() {
+	public String getValue() {
 		return value;
 	}
-	public void setValue(int value) {
+	public void setValue(String value) {
 		this.value = value;
 	}
 	public int getBuildingid() {
@@ -52,6 +52,7 @@ public class rentareaEntity {
 	public void setModifiedby(String modifiedby) {
 		this.modifiedby = modifiedby;
 	}
+	
 	
 
 }

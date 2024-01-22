@@ -3,17 +3,17 @@ package com.tt24java.repository.entity;
 import java.sql.Date;
 
 public class BuildingEntity {
-	private int id;
+	private Long id;
 	private String name;
 	private String street;
 	private String ward;
-	private int districtid;
+	private Long districtid;
 	private String structure;
 	private int numberofbasement;
-	private int floorarea;
+	private Long floorarea;
 	private String direction;
 	private String level;
-	private int rentprice;
+	private Long rentprice;
 	private String rentpricedescription;
 	private String servicefee;
 	private String carfee;
@@ -35,10 +35,10 @@ public class BuildingEntity {
 	private String modifiedby;
 	private String managername;
 	private String managerphonenumber;
-	public int getId() {
+	public Long getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 	public String getName() {
@@ -59,10 +59,10 @@ public class BuildingEntity {
 	public void setWard(String ward) {
 		this.ward = ward;
 	}
-	public int getDistrictid() {
+	public Long getDistrictid() {
 		return districtid;
 	}
-	public void setDistrictid(int districtid) {
+	public void setDistrictid(Long districtid) {
 		this.districtid = districtid;
 	}
 	public String getStructure() {
@@ -77,10 +77,10 @@ public class BuildingEntity {
 	public void setNumberofbasement(int numberofbasement) {
 		this.numberofbasement = numberofbasement;
 	}
-	public int getFloorarea() {
+	public Long getFloorarea() {
 		return floorarea;
 	}
-	public void setFloorarea(int floorarea) {
+	public void setFloorarea(Long floorarea) {
 		this.floorarea = floorarea;
 	}
 	public String getDirection() {
@@ -95,10 +95,10 @@ public class BuildingEntity {
 	public void setLevel(String level) {
 		this.level = level;
 	}
-	public int getRentprice() {
+	public Long getRentprice() {
 		return rentprice;
 	}
-	public void setRentprice(int rentprice) {
+	public void setRentprice(Long rentprice) {
 		this.rentprice = rentprice;
 	}
 	public String getRentpricedescription() {
@@ -209,6 +209,12 @@ public class BuildingEntity {
 	public void setCreatedby(String createdby) {
 		this.createdby = createdby;
 	}
+	public String getModifiedby() {
+		return modifiedby;
+	}
+	public void setModifiedby(String modifiedby) {
+		this.modifiedby = modifiedby;
+	}
 	public String getManagername() {
 		return managername;
 	}
@@ -221,12 +227,7 @@ public class BuildingEntity {
 	public void setManagerphonenumber(String managerphonenumber) {
 		this.managerphonenumber = managerphonenumber;
 	}
-	public String getModifiedby() {
-		return modifiedby;
-	}
-	public void setModifiedby(String modifiedby) {
-		this.modifiedby = modifiedby;
-	}
+	
 	
 	
 	

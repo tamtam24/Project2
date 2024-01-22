@@ -1,13 +1,13 @@
 package com.tt24java.repository.entity;
 
 public class DistrictEntity {
-	private int id;
+	private Long id;
 	private String code;
 	private String name;
-	public int getId() {
+	public Long getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 	public String getCode() {
@@ -22,5 +22,6 @@ public class DistrictEntity {
 	public void setName(String name) {
 		this.name = name;
 	}
+	
 
 }

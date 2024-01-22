@@ -1,6 +1,10 @@
 package com.tt24java.repository;
 
+import java.util.List;
+
+import com.tt24java.repository.entity.rentareaEntity;
+
 public interface RentAreaRepository {
-	String findRentAreaByBuildingId(int buildingId);
+	List<rentareaEntity> findRentAreaByBuildingId(Long id);
 
 }

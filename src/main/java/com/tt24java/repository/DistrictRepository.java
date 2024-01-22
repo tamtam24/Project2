@@ -1,6 +1,8 @@
 package com.tt24java.repository;
 
+import com.tt24java.repository.entity.DistrictEntity;
+
 public interface DistrictRepository {
-	String findDistrictNameById(int id);
+	DistrictEntity findDistrictNameById(Long id);
 
 }

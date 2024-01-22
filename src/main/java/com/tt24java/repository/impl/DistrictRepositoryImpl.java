@@ -9,26 +9,31 @@ import java.sql.Statement;
 import org.springframework.stereotype.Repository;
 
 import com.tt24java.repository.DistrictRepository;
+import com.tt24java.repository.entity.DistrictEntity;
+import com.tt24java.utils.ConnectionJDBCUtil;
 
 @Repository
 public class DistrictRepositoryImpl implements DistrictRepository {
-    static final String DB_URL = "jdbc:mySQL://localhost:3306/estatebasic";
-    static final String USER = "root";
-    static final String PASS = "";
+	
+
 
     @Override
-    public String findDistrictNameById(int districtid) {
-        String sql = "SELECT name FROM district WHERE id = " + districtid;
-        String districtName = "";
-        try (Connection conn = DriverManager.getConnection(DB_URL, USER, PASS);
+    public DistrictEntity findDistrictNameById(Long id) {
+        String sql = "SELECT d.name FROM district d  WHERE d.id = " + id;
+        DistrictEntity districtEntity= new DistrictEntity();
+        try (Connection conn = ConnectionJDBCUtil.getConnection();
              Statement stmt = conn.createStatement();
              ResultSet rs = stmt.executeQuery(sql)) {
-            if (rs.next()) {
-                districtName = rs.getString("name");
+            while (rs.next()) {
+            	
+                districtEntity.setName(rs.getString("name"));
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return districtName;
+        return districtEntity;
     }
+
+
+
 }

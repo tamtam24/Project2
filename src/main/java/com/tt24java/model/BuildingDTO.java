@@ -6,12 +6,12 @@ public class BuildingDTO {
 	private int numberofbasement;
 	private String managername;
 	private String managerphonenumber;
-	private int floorarea;
-	private int rentprice;
+	private Long floorArea;
+	private Long rentprice;
 	private String servicefee;
 	private Float brokeragefee;
-	private String typeCode;
-	
+	private String rentArea;
+	private String emptyArea;
 	public String getName() {
 		return name;
 	}
@@ -42,16 +42,16 @@ public class BuildingDTO {
 	public void setManagerphonenumber(String managerphonenumber) {
 		this.managerphonenumber = managerphonenumber;
 	}
-	public int getFloorarea() {
-		return floorarea;
+	public Long getFloorArea() {
+		return floorArea;
 	}
-	public void setFloorarea(int floorarea) {
-		this.floorarea = floorarea;
+	public void setFloorArea(Long floorArea) {
+		this.floorArea = floorArea;
 	}
-	public int getRentprice() {
+	public Long getRentprice() {
 		return rentprice;
 	}
-	public void setRentprice(int rentprice) {
+	public void setRentprice(Long rentprice) {
 		this.rentprice = rentprice;
 	}
 	public String getServicefee() {
@@ -66,12 +66,19 @@ public class BuildingDTO {
 	public void setBrokeragefee(Float brokeragefee) {
 		this.brokeragefee = brokeragefee;
 	}
-	public String getTypeCode() {
-		return typeCode;
+	public String getRentArea() {
+		return rentArea;
 	}
-	public void setTypeCode(String typeCode) {
-		this.typeCode = typeCode;
+	public void setRentArea(String rentArea) {
+		this.rentArea = rentArea;
 	}
+	public String getEmptyArea() {
+		return emptyArea;
+	}
+	public void setEmptyArea(String emptyArea) {
+		this.emptyArea = emptyArea;
+	}
+	
 	
 	
 	

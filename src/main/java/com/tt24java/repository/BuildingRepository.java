@@ -8,7 +8,7 @@ import com.tt24java.repository.entity.BuildingEntity;
 
 
 public interface BuildingRepository {
-	List<BuildingEntity>findAll(Map<String,Object>params);
+	List<BuildingEntity>findAll(Map<String,Object>params,List<String>typeCode);
 		
 	
 	
