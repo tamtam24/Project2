@@ -1,0 +1,4 @@
+INDEX VERSION 1.134+D:\Devops Learning\Java Spring\java t12\spring-boot\.metadata\.plugins\org.eclipse.jdt.core
+1865797976.index
+3413725848.index
+18828464.index

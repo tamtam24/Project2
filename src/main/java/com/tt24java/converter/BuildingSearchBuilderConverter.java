@@ -27,7 +27,7 @@ public class BuildingSearchBuilderConverter {
 				                                                                         .build();
 		
 
-		return null;
+		return buildingSearchBuilder;
 	}
 
 }

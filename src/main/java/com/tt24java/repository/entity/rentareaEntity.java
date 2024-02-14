@@ -2,55 +2,97 @@ package com.tt24java.repository.entity;
 
 import java.sql.Date;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+@Entity
+@Table(name="rentarea")
 public class rentareaEntity {
-	private int id;
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	private Long id;
+	
+	@Column(name="value")
 	private String value;
-	private int buildingid;
-	private Date createddate;
+	
+
+	
+	@Column(name="createdate")
+	private Date createdate;
+	
+	@Column(name="modifieddate")
 	private Date modifieddate;
+	
+	@Column(name="createdby")
 	private String createdby;
+	
+	@Column(name="modifiedby")
 	private String modifiedby;
-	public int getId() {
+	
+	@ManyToOne
+	@JoinColumn (name="buildingid")
+	private BuildingEntity building;
+
+	public Long getId() {
 		return id;
 	}
-	public void setId(int id) {
+
+	public void setId(Long id) {
 		this.id = id;
 	}
+
 	public String getValue() {
 		return value;
 	}
+
 	public void setValue(String value) {
 		this.value = value;
 	}
-	public int getBuildingid() {
-		return buildingid;
+
+	public Date getCreatedate() {
+		return createdate;
 	}
-	public void setBuildingid(int buildingid) {
-		this.buildingid = buildingid;
+
+	public void setCreatedate(Date createdate) {
+		this.createdate = createdate;
 	}
-	public Date getCreateddate() {
-		return createddate;
-	}
-	public void setCreateddate(Date createddate) {
-		this.createddate = createddate;
-	}
+
 	public Date getModifieddate() {
 		return modifieddate;
 	}
+
 	public void setModifieddate(Date modifieddate) {
 		this.modifieddate = modifieddate;
 	}
+
 	public String getCreatedby() {
 		return createdby;
 	}
+
 	public void setCreatedby(String createdby) {
 		this.createdby = createdby;
 	}
+
 	public String getModifiedby() {
 		return modifiedby;
 	}
+
 	public void setModifiedby(String modifiedby) {
 		this.modifiedby = modifiedby;
+	}
+
+	public BuildingEntity getBuilding() {
+		return building;
+	}
+
+	public void setBuilding(BuildingEntity building) {
+		this.building = building;
 	}
 	
 	
