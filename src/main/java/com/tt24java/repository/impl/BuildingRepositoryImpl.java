@@ -14,7 +14,7 @@ import com.tt24java.repository.BuildingRepository;
 import com.tt24java.repository.entity.BuildingEntity;
 
 @Repository
-@Primary
+
 public class BuildingRepositoryImpl implements BuildingRepository {
 	@PersistenceContext
 	private EntityManager entityManager;
@@ -22,13 +22,13 @@ public class BuildingRepositoryImpl implements BuildingRepository {
 	@Override
 	public List<BuildingEntity> findAll(BuildingSearchBuilder buildingSearchBuilder) {
 	
-		//JPQL
+//		//JPQL
 //		String sql="FROM BuildingEntity ";
 //		Query query=entityManager.createQuery(sql,BuildingEntity.class);
 //		return query.getResultList();
 //		
 		//SQLNative
-		String sql= "SELECT * from building b where b.name like '%building%' ";
+		String sql= "SELECT * from building  ";
 		Query query=entityManager.createNativeQuery(sql,BuildingEntity.class);
 		return query.getResultList();
 	}

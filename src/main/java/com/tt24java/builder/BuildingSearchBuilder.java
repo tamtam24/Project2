@@ -97,6 +97,7 @@ public class BuildingSearchBuilder {
 		private Long areaFrom;
 		private Long areaTo;
 		private Long staffId;
+		
 		public Builder setName(String name) {
 			this.name = name;
 			return this;
