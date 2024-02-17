@@ -31,7 +31,7 @@ public class BuildingDTOConverter {
 		DistrictEntity districtEntity = districtRepository.findDistrictNameById(item.getDistrictid());
 		building.setAddress(item.getStreet() + "," + item.getWard() + "," + districtEntity.getName());
 		List<rentareaEntity> rentAreas = rentareaRepository.findRentAreaByBuildingId(item.getId());
-		String areaResult = rentAreas.stream().map(it -> it.toString()).collect(Collectors.joining(","));
+		String areaResult = rentAreas.stream().map(it -> it.getValue().toString()).collect(Collectors.joining(","));
 		building.setRentArea(areaResult);
 		return building;
 	}
