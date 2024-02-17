@@ -11,6 +11,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
@@ -122,6 +123,10 @@ public class BuildingEntity {
 	@OneToMany(mappedBy="building",fetch = FetchType.LAZY)
 	private List<rentareaEntity>items = new ArrayList<>();
 
+	@ManyToMany(mappedBy="buildings",fetch=FetchType.LAZY)	
+	private List<renttypeEntity>renttypes=new ArrayList<>();
+	
+	
 	public Long getId() {
 		return id;
 	}
