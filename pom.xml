@@ -18,6 +18,7 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web-services</artifactId>
 		</dependency>
+<<<<<<< Updated upstream
 		<dependency>
 			<groupId>org.modelmapper</groupId>
 			<artifactId>modelmapper</artifactId>
@@ -31,6 +32,9 @@
         <groupId>mysql</groupId>
         <artifactId>mysql-connector-java</artifactId>
     </dependency>
+=======
+
+>>>>>>> Stashed changes
 	</dependencies>
 
 </project>
