@@ -7,6 +7,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.transaction.Transactional;
 
+import com.tt24java.repository.DistrictRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -28,6 +29,9 @@ import com.tt24java.service.BuildingService;
 public class BuildingAPI {
     @Autowired
     private BuildingService buildingService;
+
+    @Autowired
+	private DistrictRepository districtRepository;
     
     @PersistenceContext
 	private EntityManager entityManager;
@@ -65,7 +69,7 @@ public class BuildingAPI {
     	entityManager.merge(builEntity);
     	System.out.print("oke");
     }
-    
+
     @DeleteMapping(value ="/api/building/{id}")
     public void deleteBuilding(@PathVariable Long id) {
     	BuildingEntity builEntity = entityManager.find(BuildingEntity.class, id);

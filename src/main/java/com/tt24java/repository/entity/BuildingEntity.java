@@ -38,8 +38,8 @@ public class BuildingEntity {
 	@Column(name="structure")
 	private String structure;
 	
-	@Column(name="numberofbasement")
-	private int numberofbasement;
+	@Column(name="numberofbasement",nullable = true)
+	private Integer numberofbasement;
 	
 	@Column(name="floorarea")
 	private Long floorarea;
