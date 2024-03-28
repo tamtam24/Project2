@@ -3,10 +3,9 @@ package com.tt24java.api;
 import java.util.List;
 import java.util.Map;
 
+import com.tt24java.repository.entity.BuildingEntity;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import com.tt24java.model.BuildingDTO;
 import com.tt24java.service.BuildingService;
@@ -22,4 +21,11 @@ public class BuildingAPI {
         List<BuildingDTO> result = buildingService.findAll(params,typeCode);
         return result;
     }
+
+    @DeleteMapping(value = "/api/building/{id}")
+    public void deleteBuilding(@PathVariable Long id){
+        buildingService.deleteBuilding(id);
+        System.out.println("delete oke");
+    }
+    
 }

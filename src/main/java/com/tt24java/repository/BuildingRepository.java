@@ -11,7 +11,9 @@ import com.tt24java.repository.entity.BuildingEntity;
 public interface BuildingRepository {
 	List<BuildingEntity>findAll(BuildingSearchBuilder buildingSearchBuilder);
 		
-	
+	BuildingEntity findBuildingById (Long id);
+
+	void deleteBuildingByEntity(BuildingEntity buildingEntity);
 	
 
 }

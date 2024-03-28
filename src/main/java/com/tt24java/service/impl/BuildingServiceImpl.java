@@ -37,4 +37,14 @@ public class BuildingServiceImpl implements BuildingService {
         }
         return result;
     }
+
+
+
+    @Override
+    public void deleteBuilding(Long id){
+        BuildingEntity buildingEntity = buildingRepository.findBuildingById(id);
+        if(buildingEntity.getId()!=null) {
+            buildingRepository.deleteBuildingByEntity(buildingEntity);
+        }
+    }
 }

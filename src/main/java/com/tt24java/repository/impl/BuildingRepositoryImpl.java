@@ -174,4 +174,70 @@ public class BuildingRepositoryImpl implements BuildingRepository {
 		return result;
 	}
 
+	@Override
+	public BuildingEntity findBuildingById(Long id){
+		String sql =  "SELECT * from building where id="+id;
+		BuildingEntity building = new BuildingEntity();
+		try (Connection conn = ConnectionJDBCUtil.getConnection();
+			 Statement stmt = conn.createStatement();
+			 ResultSet rs = stmt.executeQuery(sql)) {
+			while (rs.next()) {
+
+				building.setId(rs.getLong("id"));
+				building.setName(rs.getString("name"));
+				building.setStreet(rs.getString("street"));
+				building.setWard(rs.getString("ward"));
+				building.setDistrictid(rs.getLong("districtid"));
+				building.setStructure(rs.getString("structure"));
+				building.setNumberofbasement(rs.getInt("numberofbasement"));
+				building.setFloorarea(rs.getLong("floorarea"));
+				building.setDirection(rs.getString("direction"));
+				building.setLevel(rs.getString("level"));
+				building.setRentprice(rs.getLong("rentprice"));
+				building.setRentpricedescription(rs.getString("rentpricedescription"));
+				building.setServicefee(rs.getString("servicefee"));
+				building.setCarfee(rs.getString("carfee"));
+				building.setMotorbikefee(rs.getString("motorbikefee"));
+				building.setOvertimefee(rs.getString("overtimefee"));
+				building.setElectricityfee(rs.getString("electricityfee"));
+				building.setDeposit(rs.getString("deposit"));
+				building.setPayment(rs.getString("payment"));
+				building.setRenttime(rs.getString("renttime"));
+				building.setDecorationtime(rs.getString("decorationtime"));
+				building.setBrokeragefee(rs.getFloat("brokeragefee"));
+				building.setNote(rs.getString("note"));
+				building.setLinkofbuilding(rs.getString("linkofbuilding"));
+				building.setMap(rs.getString("map"));
+				building.setImage(rs.getString("image"));
+				building.setCreatedate(rs.getDate("createddate"));
+				building.setModifieddate(rs.getDate("modifieddate"));
+				building.setCreatedby(rs.getString("createdby"));
+				building.setModifiedby(rs.getString("modifiedby"));
+				building.setManagername(rs.getString("managername"));
+				building.setManagerphonenumber(rs.getString("managerphonenumber"));
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return building;
+	}
+
+
+	@Override
+	public void deleteBuildingByEntity(BuildingEntity buildingEntity) {
+		Long id = buildingEntity.getId();
+		String sql = "DELETE FROM building WHERE id = " + id;
+		try (Connection conn = ConnectionJDBCUtil.getConnection();
+			 Statement stmt = conn.createStatement()) {
+			int rowsAffected = stmt.executeUpdate(sql);
+			if (rowsAffected > 0) {
+				System.out.println("Building with ID " + id + " deleted successfully.");
+			} else {
+				System.out.println("No building found with ID " + id + ". Nothing deleted.");
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+
 }
