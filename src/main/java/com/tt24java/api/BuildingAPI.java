@@ -30,8 +30,6 @@ public class BuildingAPI {
     @Autowired
     private BuildingService buildingService;
 
-    @Autowired
-	private DistrictRepository districtRepository;
     
     @PersistenceContext
 	private EntityManager entityManager;
